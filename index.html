@@ -7,25 +7,66 @@
     <title>Моя Презентація</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
+            color: #333;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 15px;
             text-align: center;
+            padding: 20px 0;
         }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
         main {
-            padding: 20px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        /* Стилі для вбудованого PDF */
         iframe {
             width: 100%;
-            height: 600px;
+            height: 800px;
             border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: #fff;
         }
+
+        /* Стиль для кнопки повноекранного перегляду */
+        .fullscreen-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: #45a049;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -34,6 +75,16 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -44,13 +95,19 @@
 </header>
 
 <main>
-    <h2>Презентація на сайті</h2>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRvVl4s_yUJ0isGemZU_BEOkRVDuf3n2Wbmtxlfpk6EPhhI6KyVDr-1hfLvQYa5qsxEawpz72DCIHmF/pub?start=false&loop=false&delayms=3000"
-            allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div>
+        <h2>Презентація на сайті</h2>
+        <iframe src="1.pdf" type="application/pdf">
+            Ваш браузер не підтримує відображення PDF. Скачайте файл: <a href="1.pdf">my_presentation.pdf</a>
+        </iframe>
+
+        
+        <a href="1.pdf" target="_blank" class="fullscreen-btn">Переглянути в повноекранному режимі</a>
+    </div>
 </main>
 
 <footer>
-    <p>2025 © Мій сайт</p>
+    <p>2025 © Мій сайт | <a href="1.pdf">Завантажити PDF</a></p>
 </footer>
 
 </body>
